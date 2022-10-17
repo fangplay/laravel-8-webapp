@@ -16,6 +16,18 @@
     </style>
 </head>
 <body>
-    <h4>Working Inprogress</h4>
+    <h4>Game Release List</h4>
+    <table>
+        <tr>
+            <th>Game Name</th>
+            <th>Year</th>
+        </tr>
+        @foreach ($release as $r)
+            <tr>
+                <td>{{ $r->GameName}}</td>
+                <td>{{ $r->Year}}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>
