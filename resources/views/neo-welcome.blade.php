@@ -91,6 +91,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                        <div class="ml-12">
+                            <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                <div class="ml-5 text-lg leading-5 font-semibold"><a href="/release" class="underline text-gray-900 dark:text-white">Game Release List</a></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

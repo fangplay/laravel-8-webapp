@@ -29,3 +29,5 @@ Route::get('/generations',[betaServer::class,'generationData']);
 Route::get('/projects',[betaServer::class,'projects']);
 // info route way
 Route::get('/info',[betaServer::class,'info']);
+// game release list
+Route::get('/release',[betaServer::class,'release']);

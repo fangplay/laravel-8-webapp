@@ -35,4 +35,9 @@ class betaServer extends Controller
     function info(){
         return view('info');
     }
+
+    // Release Games
+    function release(){
+        return view('release');
+    }
 }
