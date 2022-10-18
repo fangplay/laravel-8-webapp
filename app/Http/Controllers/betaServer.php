@@ -38,7 +38,7 @@ class betaServer extends Controller
 
     // Release Games
     function release(){
-        $release = DB::table('release')->join('game-list','release.game_id','=','game-list.id')->select('release.year as Year','game-list.name as GameName')->orderBy('year')->get();
+        $release = DB::table('game-list')->select('year as Year','name as GameName')->orderBy('year')->get();
         return view('release',compact('release'));
         // return view('release');
     }
