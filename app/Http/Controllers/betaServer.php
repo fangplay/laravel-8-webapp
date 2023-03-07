@@ -22,7 +22,7 @@ class betaServer extends Controller
     //gamelist route
     function gameData()
     {
-        $gameList = DB::table('game-list')->join('generation','game-list.gen_id','=','generation.id')->select('game-list.name as gamename','generation.name as genname')->orderBy('gen_id')->get();
+        $gameList = DB::table('gamelist')->join('generation','game-list.gen_id','=','generation.id')->select('game-list.name as gamename','generation.name as genname')->orderBy('gen_id')->get();
         return view('game-list',compact('gameList'));
     }
     //projects route
