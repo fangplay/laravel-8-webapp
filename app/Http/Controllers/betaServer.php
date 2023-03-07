@@ -36,6 +36,11 @@ class betaServer extends Controller
         return view('info');
     }
 
+    //insert testing
+    function datediary(){
+        return view('diary');
+    }
+
     // Release Games
     function release(){
         $release = DB::table('game-list')->select('year as Year','name as GameName')->orderBy('year')->get();
