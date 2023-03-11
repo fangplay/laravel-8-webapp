@@ -47,4 +47,24 @@ class betaServer extends Controller
         return view('release',compact('release'));
         // return view('release');
     }
+
+    //gallery
+    function gallery(){
+        return view('gallery');
+    }
+
+    //contact
+    function contact(){
+        return view('contact');
+    }
+
+    //experience
+    function experience(){
+        return view('experience');
+    }
+
+    //setupdiary
+    function setupdiary(){
+        return view('setupdiary');
+    }
 }

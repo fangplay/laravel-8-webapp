@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>FANGPLAY Official Website</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,28 +23,52 @@
     </style>
 </head>
 <body>
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <header>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <a class="navbar-brand" href="/">FANGPLAY</a>
-                  </div>
-                  <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/insert-page">Order Insert</a></li>
-                  </ul>
-                </div>
-            </nav>
-        </header>
+    {{-- Header Navbar --}}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">FANGPLAY</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/diary">Diary</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Generations<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Generation 1(2006-2007)</a></li>
+                  <li><a href="#">Generation 2(2007-2009)</a></li>
+                  <li><a href="#">Generation 3(2009-2012)</a></li>
+                  <li><a href="#">Generation 4(2012-2015)</a></li>
+                  <li><a href="#">Generation 5(2015-2017)</a></li>
+                  <li><a href="#">SPECTRUM Generation(2017-2020)</a></li>
+                  <li><a href="#">NeoSPECTRUM Generation(2021-Present)</a></li>
+                </ul>
+              </li>
+              <li><a href="/experience">Gamer & Expirience</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/info">Information</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/game-list">Game List</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-white-900 sm:items-center py-4 sm:pt-0">
                 <div class="container">
                     @yield('content')
                 </div>
+        </div>
         <footer>
-            <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                Dev on Laravel V{{ Illuminate\Foundation\Application::VERSION }} (PHP V{{ PHP_VERSION }})
-            </div>
-            <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left sm:ml-0">
+            <div class="ml-4 text-center text-sm text-black-500 dark:text-black-400 sm:text-center sm:ml-0">
+                Dev on Laravel V{{ Illuminate\Foundation\Application::VERSION }} (PHP V{{ PHP_VERSION }})<br>
                 <div class="copyright" id="copyright">
                     &copy;
                     <script>
@@ -52,6 +77,5 @@
                 </div>
             </div>
         </footer>
-    </div>
 </body>
 </html>

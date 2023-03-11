@@ -31,5 +31,14 @@ Route::get('/projects',[betaServer::class,'projects']);
 Route::get('/info',[betaServer::class,'info']);
 // game release list
 Route::get('/release',[betaServer::class,'release']);
-//beta diary
+//diary
 Route::get('/diary',[betaServer::class,'datediary']);
+//gallery
+Route::get('/gallery',[betaServer::class,'gallery']);
+//contact
+Route::get('/contact',[betaServer::class,'contact']);
+//experience
+Route::get('/experience',[betaServer::class,'experience']);
+
+//post diary
+Route::post('/setup-diary',[betaServer::class,'setupdiary']);
