@@ -17,8 +17,8 @@
         </tr>
         @foreach ($diary as $story)
         <tr>
-            <td>{{ $story->date }}</td>
-            <td>{{ $story->story }}</td>
+            <td>{{ $story->Date }}</td>
+            <td>{{ $story->Story }}</td>
             <td><a href="#">Edit</a></td>
             <td><a href="#">Delete</a></td>
         </tr>

@@ -5,10 +5,10 @@
                 <h1>Diary Inserting</h1>
             </div>
         </div>
-        <form action="{{url('insert-diary')}}" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
+        <form action="save-diary" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
             <div class="mb-3">
                 <label for="title" class="form-label text-white">Title</label>
-                <input type="text" class="form-control" id="title" name="title" rows="3" placeholder="Please insert title stories">
+                <input type="text" class="form-control" id="story" name="story" rows="3" placeholder="Please insert title stories">
               </div>
               <div  class="mb-3">
                 <label for="date" class="form-label text-white">Date</label>
@@ -18,7 +18,7 @@
                 <label for="exampleFormControlTextarea1" class="form-label text-white">Description</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Please write stories" rows="3"></textarea>
               </div> --}}
-            <button type="submit"  value="Add Stories" class="btn btn-primary">Submit</button>
+              <input type="submit" class="btn btn-primary" value="Add" />
         </form>
 @endsection
 

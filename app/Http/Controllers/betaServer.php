@@ -72,10 +72,15 @@ class betaServer extends Controller
     }
 
     function insertDiary(Request $request){
-        $save = new diary;
-        $save->story = $request->title;
-        $save->date = $request->date;
-        $save->save();
-        return redirect('diary')->with('status', 'Diary Added');
+        $diary = new diary;
+        $diary->date = $request->get('date');
+        $diary->story = $request->get('story');
+        $diary->save();
+        return redirect()->back()->with('status', 'Diary Added');
+        // $story = $request->input('story');
+        // $date = $request->input('date');
+        // $data = array('date'=> $date, 'story'=> $story);
+        // DB::table('diary')->insert($data);
+        // return redirect('diary')->with('status', 'Diary Added');
     }
 }

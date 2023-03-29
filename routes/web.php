@@ -43,4 +43,4 @@ Route::get('contact',[betaServer::class,'contact']);
 Route::get('experience',[betaServer::class,'experience']);
 
 //post diary
-Route::post('insert-diary',[betaServer::class,'insertDiary']);
+Route::post('save-diary',[betaServer::class,'insertDiary']);
