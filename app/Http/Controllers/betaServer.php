@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
+use App\Models\diary;
+
 class betaServer extends Controller
 {
     //index route
@@ -36,8 +38,14 @@ class betaServer extends Controller
         return view('info');
     }
 
-    //insert testing
+    //diary list page
     function datediary(){
+        $diary = DB::table('diary')->select('date as Date','story as Story')->get();
+        return view('diarylist',compact('diary'));
+    }
+
+    //diary inserting page
+    function getdiary(){
         return view('diary');
     }
 
@@ -63,8 +71,11 @@ class betaServer extends Controller
         return view('experience');
     }
 
-    //setupdiary
-    function setupdiary(){
-        return view('setupdiary');
+    function insertDiary(Request $request){
+        $save = new diary;
+        $save->story = $request->title;
+        $save->date = $request->date;
+        $save->save();
+        return redirect('diary')->with('status', 'Diary Added');
     }
 }
