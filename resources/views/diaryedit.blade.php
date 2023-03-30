@@ -2,7 +2,7 @@
 @section('content')
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                <h1>Diary Inserting</h1>
+                <h1>Diary Editing</h1>
             </div>
         </div>
         <form action="insertDiary" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
