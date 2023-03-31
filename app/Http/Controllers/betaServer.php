@@ -40,7 +40,7 @@ class betaServer extends Controller
 
     //diary list page
     public function datediary(){
-        $diary = DB::table('diary')->select('date as Date','story as Story')->get();
+        $diary = DB::table('diary')->select()->get();
         return view('diarylist',compact('diary'));
     }
 
