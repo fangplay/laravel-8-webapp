@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-        <a href="/get-diary">Insert</a>
+        <a href="list-diary">Insert</a>
     </div>
     <table>
         <tr>
@@ -19,8 +19,8 @@
         <tr>
             <td>{{ $story->Date }}</td>
             <td>{{ $story->Story }}</td>
-            <td><a href="#">Edit</a></td>
-            <td><a href="#">Delete</a></td>
+            <td><a href="{{url('edit-diary/'.$story->id)}}">Edit</a></td>
+            <td><a href="{{url('delete-diary/'.$story->id)}}">Delete</a></td>
         </tr>
         @endforeach
     </table>

@@ -46,7 +46,7 @@ class betaServer extends Controller
 
     //diary inserting page
     public function getdiary(){
-        return view('diary');
+        return view('diaryinsert');
     }
 
     // Release Games
@@ -71,19 +71,27 @@ class betaServer extends Controller
         return view('experience');
     }
 
+    //insert diary function
     public function insertDiary(Request $request){
-        // $diary = new diary;
-        // $diary->date = $request->get('date');
-        // $diary->story = $request->get('story');
-        // $diary->save();
         $date = $request->input('date');
         $story = $request->input('story');
         DB::insert('insert into diary (date, story) values (?, ?)', [$date, $story]);
         return redirect()->back()->with('status', 'Diary Added');
-        // $story = $request->input('story');
-        // $date = $request->input('date');
-        // $data = array('date'=> $date, 'story'=> $story);
-        // DB::table('diary')->insert($data);
-        // return redirect('diary')->with('status', 'Diary Added');
+    }
+
+    //edit diary function
+    public function editDiary($id){
+        $diaryfind = diary::find($id);
+        return view('diaryedit',compact('diaryfind'));
+    }
+
+    //delete diary function
+    public function deleteDiary(Request $request){
+
+    }
+
+    //update diary function
+    public function updateDiary(Request $request){
+
     }
 }

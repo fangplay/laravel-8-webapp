@@ -5,7 +5,7 @@
                 <h1>Diary Editing</h1>
             </div>
         </div>
-        <form action="insertDiary" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
+        <form action="insert-diary" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
             <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
             <div class="mb-3">
                 <label for="title" class="form-label text-white">Title</label>
