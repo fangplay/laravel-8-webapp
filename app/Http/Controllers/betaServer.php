@@ -76,7 +76,7 @@ class betaServer extends Controller
         $date = $request->input('date');
         $story = $request->input('story');
         DB::insert('insert into diary (date, story) values (?, ?)', [$date, $story]);
-        return redirect('list-diary')->with('status', 'Diary Added');
+        return redirect('diary')->with('status', 'Diary Added');
     }
 
     //edit diary function
@@ -89,7 +89,7 @@ class betaServer extends Controller
     public function deleteDiary(Request $request,$id){
         $diary = diary::find($id);
         $diary->delete();
-        return redirect('list-diary')->with('status','Diary Deleted Successfully');
+        return redirect('diary')->with('status','Diary Deleted Successfully');
     }
 
     //update diary function
@@ -98,6 +98,6 @@ class betaServer extends Controller
         $diary->date = $request->input('date');
         $diary->story = $request->input('story');
         $diary->update();
-        return redirect('list-diary')->with('status','Diary Updated Successfully');
+        return redirect('diary')->with('status','Diary Updated Successfully');
     }
 }

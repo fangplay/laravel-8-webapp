@@ -49,4 +49,4 @@ Route::get('edit-diary/{id}',[betaServer::class,'editDiary']);
 //delete diary route
 Route::get('delete-diary/{id}',[betaServer::class,'deleteDiary']);
 //update diary route
-Route::put('update-diary',[betaServer::class,'updateDiary']);
+Route::post('update-diary/{id}',[betaServer::class,'updateDiary']);

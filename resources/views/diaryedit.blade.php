@@ -5,15 +5,15 @@
                 <h1>Diary Editing</h1>
             </div>
         </div>
-        <form action="{{ url('update-diary/'.$diaryind->id) }}" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
+        <form action="{{ url('update-diary/'.$diaryfind->id) }}" method="post" enctype="multipart/form-data" class="form-group" style="width:70%; margin-left:10%;">
             <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
             <div class="mb-3">
                 <label for="title" class="form-label text-white">Title</label>
-                <input type="text" class="form-control" id="story" name="story" rows="3" value="{{$diaryind->story}}">
+                <input type="text" class="form-control" id="story" name="story" rows="3" value="{{$diaryfind->story}}">
               </div>
               <div  class="mb-3">
                 <label for="date" class="form-label text-white">Date</label>
-                <input type="date" class="form-control" id="date" name="date" value="{{$diaryind->date}}">
+                <input type="date" class="form-control" id="date" name="date" value="{{$diaryfind->date}}">
               </div>
               {{-- <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label text-white">Description</label>
