@@ -45,8 +45,8 @@ Route::get('experience',[betaServer::class,'experience']);
 //insert process route
 Route::post('insert-diary',[betaServer::class,'insertDiary']);
 //pre-update diary route
-Route::get('edit-diary',[betaServer::class,'editDiary']);
+Route::get('edit-diary/{id}',[betaServer::class,'editDiary']);
 //delete diary route
-Route::delete('delete-diary',[betaServer::class,'deleteDiary']);
+Route::get('delete-diary/{id}',[betaServer::class,'deleteDiary']);
 //update diary route
 Route::put('update-diary',[betaServer::class,'updateDiary']);
