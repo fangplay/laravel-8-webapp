@@ -5,6 +5,40 @@
     <div class="flex justify-center pt-0 sm:justify-start sm:pt-0">
         <div class="mt-6 text-black-600 dark:text-black-400 text-sm">
             <h1>FANGPLAY OFFICIAL</h1>
+            <h3 id="MyClockDisplay" class="clock" onload="showTime()"></h3>
+            <div>
+                <img src="/img/prologue-time.jpg" height="100%" width="100%" alt="Image">
+            </div>
+          <script>
+            function showTime(){
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+
+            if(h == 0){
+                h = 12;
+            }
+
+            if(h > 12){
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();</script>
         </div>
     </div>
 
