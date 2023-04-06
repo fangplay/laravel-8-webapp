@@ -8,7 +8,7 @@
     </div>
     <div>
         <h5>NeoXFANGPLAY</h5>
-        <img src="/img/logo-x+8-social.png" width="80%" height="80%">
+        <img src="/img/logo-x-8.jpg" width="80%" height="80%">
     </div>
 
 @endsection
