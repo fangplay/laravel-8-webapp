@@ -19,13 +19,34 @@ use App\Http\Controllers\betaServer;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-//get new index
-Route::get('/', [betaServer::class,'index']);
-// game data route way
-Route::get('/game-list',[betaServer::class,'gameData']);
-// generation route way
-Route::get('/generations',[betaServer::class,'generationData']);
-// projects route way
-Route::get('/projects',[betaServer::class,'projects']);
-// info route way
-Route::get('/info',[betaServer::class,'info']);
+//get new index route
+Route::get('', [betaServer::class,'index']);
+// game data route
+Route::get('game-list',[betaServer::class,'gameData']);
+// generation route
+Route::get('generations',[betaServer::class,'generationData']);
+// projects route
+Route::get('projects',[betaServer::class,'projects']);
+// info route
+Route::get('info',[betaServer::class,'info']);
+// game release list route
+Route::get('release',[betaServer::class,'release']);
+//diary list route
+Route::get('diary',[betaServer::class,'datediary']);
+//get insert diary route
+Route::get('list-diary',[betaServer::class,'getdiary']);
+//gallery route
+Route::get('gallery',[betaServer::class,'gallery']);
+//contact route
+Route::get('contact',[betaServer::class,'contact']);
+//experience route
+Route::get('experience',[betaServer::class,'experience']);
+
+//insert process route
+Route::post('insert-diary',[betaServer::class,'insertDiary']);
+//pre-update diary route
+Route::get('edit-diary/{id}',[betaServer::class,'editDiary']);
+//delete diary route
+Route::get('delete-diary/{id}',[betaServer::class,'deleteDiary']);
+//update diary route
+Route::post('update-diary/{id}',[betaServer::class,'updateDiary']);
